@@ -1,0 +1,9 @@
+clusterName: iris-cluster
+region: ap-south-1
+logs:
+  enabled: true
+  retentionDays: 1
+  logGroupName: "/eks/iris-cluster"
+  logStreamName: "{instance_id}"
+metrics:
+  enabled: true
