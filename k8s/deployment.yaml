@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: irisdeploy-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: irisdeploy
+  template:
+    metadata:
+      labels:
+        app: irisdeploy
+    spec:
+      containers:
+      - name: irisdeploy
+        image: harshilshukla/irisdeploy:latest2
+        ports:
+        - containerPort: 5000

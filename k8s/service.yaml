@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: iris-service
+  namespace: iris
+spec:
+  type: LoadBalancer
+  selector:
+    app: irisdeploy
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 5000
